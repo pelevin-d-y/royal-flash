@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.5.1",
-    "fullpage.js": "^3.0.7",
+    "fullpage.js": "2.9.7",
     "jquery": "^3.4.0",
     "normalize.css": "^8.0.1",
     "postcss-modules": "^1.4.1"
