@@ -7,6 +7,7 @@ module.exports = function (app) {
         .then((connection) => {
             const db = connection.db('database')
             app.people = db.collection("people");
+
             console.log("Database connection established")
         })
         .catch((err) => console.error(err))
