@@ -23,6 +23,12 @@
     "autoprefixer": "^9.5.1",
     "fullpage.js": "2.9.7",
     "jquery": "^3.4.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^7.4.0",
+    "mongodb": "^3.3.0",
+    "nodemon": "^1.19.1",
     "normalize.css": "^8.0.1",
     "postcss-modules": "^1.4.1"
   }
