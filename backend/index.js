@@ -3,10 +3,11 @@ const Router = require("koa-router");
 const BodyParser = require("koa-bodyparser");
 const data = require("./localization")
 const ObjectID = require("mongodb").ObjectID;
+const cors = require('@koa/cors');
 
 const app = new Koa();
 const router = new Router();
-
+app.use(cors());
 // Use the bodyparser middlware
 app.use(BodyParser());
 
@@ -68,5 +69,4 @@ router.post("/people/:id", async (ctx) => {
 const logger = require('koa-logger');
 app.use(logger());
 app.use(router.routes()).use(router.allowedMethods());
-
 app.listen(3000);

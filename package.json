@@ -7,20 +7,27 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel ./pug/index.pug",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "build": "parcel build ./pug/index.pug parcel --public-url ./"
+    "build": "parcel build ./pug/index.pug parcel --public-url ./",
+    "serve": "nodemon ./backend/*.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "cssnano": "^4.1.10",
-    "pug": "^2.0.3",
     "parcel-bundler": "^1.12.3",
+    "pug": "^2.0.3",
     "push-dir": "^0.4.1",
     "sass": "^1.19.0"
   },
   "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "@koa/cors": "^2.2.3",
     "autoprefixer": "^9.5.1",
+    "axios": "^0.19.0",
     "fullpage.js": "2.9.7",
     "jquery": "^3.4.0",
     "koa": "^2.7.0",

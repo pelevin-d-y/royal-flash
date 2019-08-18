@@ -5,7 +5,15 @@ block content
     .section
       | section 1
     .section
-      | section 2
+      form.form
+        .form__title
+          | Регистрация
+        .form__name
+          input(name="name").autocomplete
+        .form__words
+          input(type="text" name="field1" placeholder="Умный")
+          input(type="text" name="field2" placeholder="Сильный")
+          input(type="text" name="field3" placeholder="Красивый")
     .section
       | section 3
     .section
