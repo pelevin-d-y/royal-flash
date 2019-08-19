@@ -5,9 +5,10 @@
 
 .map {
     margin-left: 60px;
+    max-width: 588px;
 }
 .map img{
-    max-width: 588px;
+    
     width: 100%;
     border-radius: 20px;
     box-shadow: 20px 20px 0px #465CA6;
@@ -51,7 +52,18 @@
         flex-direction: column;
         
     }
+
+    .info-wrapper {
+       max-width: 523px; 
+    }
     .map {
         margin-top: 30px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .info-wrapper {
+        font-size: 20px;
     }
 }
