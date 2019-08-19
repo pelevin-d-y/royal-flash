@@ -3,15 +3,16 @@
 }
 
 body {
-  background: $green;
+  background: url('../images/background.svg') center no-repeat;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-left: 100px;
 }
 
 .main {
@@ -24,27 +25,23 @@ body {
   height: 200px;
 }
 
-.block-1 {
-  background: red;
-}
-
-.block-2 {
-  background: white;
-}
-
-.block-3 {
-  background: blue;
-}
-
-.block-4 {
-  background: #cccccc;
-}
-
 .image img {
   object-fit: cover;
 }
 
 #fullpage {
-  height: auto !important;
+  // height: auto !important;
   background: url('../images/background.svg') no-repeat center/cover;
 }
+
+ input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 37.5px;
+    background: #FFFFFF;
+    border: none;
+ }
+
+ .hidden {
+   display: none;
+ }
