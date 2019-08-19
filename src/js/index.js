@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 
 
 $(document).ready(() => {
-  const url = 'https://beelineevent.ru:3000'
+  const url = 'https://beelineevent.ru'
   const config = { headers: {"Access-Control-Allow-Origin": "*"} }
   let registered = false
 
@@ -74,7 +74,6 @@ $(document).ready(() => {
     const res = await axios.post(`${url}/people/${id}`, data, config)
     console.log('id', id)
     registered = true
-    console.log('res.data', res.data.response.description)
     if (res.data.response.description === 'updated') {
       Swal.fire({
         title: 'Успешно!',
