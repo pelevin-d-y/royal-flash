@@ -3,11 +3,13 @@ var jquery = require("jquery");
 window.$ = window.jQuery = jquery;
 import autoComplete from './auto-complete.js';
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 
 $(document).ready(() => {
-  const url = 'http://127.0.0.1:3000'
+  const url = 'https://beelineevent.ru:3000'
   const config = { headers: {"Access-Control-Allow-Origin": "*"} }
+  let registered = false
 
   let people = []
   const getPeople = async () => {
@@ -15,11 +17,13 @@ $(document).ready(() => {
     people = res.data 
   }
   getPeople()
-  setTimeout(() => {
-    console.log('people', people)
-  }, 300)
+
   $('#fullpage').fullpage({
-    
+    onLeave: function(origin, destination, direction) {
+      if ((registered === false) && (destination>=3)) {
+        return false
+      }
+    }  
   });
 
   new autoComplete({
@@ -44,11 +48,16 @@ $(document).ready(() => {
   $('.continue').click(() => {
     const person = people.find(person => person.name === $('.autocomplete').val())
     if (person) {
-      id = people.find(person => person.name === $('.autocomplete').val()).id
+      id = person.id
       $('.form__name-wrapper').addClass('hidden')
       $('.form__come').removeClass('hidden')
     } else {
-      alert('Такой человек не найден в базе')
+      Swal.fire({
+        title: 'Ошибка!',
+        text: 'Пользователь не найден',
+        type: 'error',
+        confirmButtonText: 'Закрыть'
+      })
     }
   })
 
@@ -63,7 +72,23 @@ $(document).ready(() => {
       "field3": formData[3].value,
     }
     const res = await axios.post(`${url}/people/${id}`, data, config)
+    console.log('id', id)
+    registered = true
     console.log('res.data', res.data.response.description)
-    alert(res.data.response.description)
+    if (res.data.response.description === 'updated') {
+      Swal.fire({
+        title: 'Успешно!',
+        text: 'Вы успешно зарегестрированы',
+        type: 'success',
+        confirmButtonText: 'Закрыть'
+      })
+    } else if (res.data.response.description === 'replay') {
+      Swal.fire({
+        title: 'Ошибка!',
+        text: 'Вы уже зарегестрированы',
+        type: 'error',
+        confirmButtonText: 'Закрыть'
+      })
+    }
   })
 })
