@@ -11,8 +11,15 @@ block content
             | Узнай больше о блоках компании и взгляни на Билайн по-новому!
             | До встречи.
     .section
-      .container
-        | section 2
+      form.form
+        .form__title
+          | Регистрация
+        .form__name
+          input(name="name").autocomplete
+        .form__words
+          input(type="text" name="field1" placeholder="Умный")
+          input(type="text" name="field2" placeholder="Сильный")
+          input(type="text" name="field3" placeholder="Красивый")
     .section
       .container
         .welcome-wrapper
