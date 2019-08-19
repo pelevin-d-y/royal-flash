@@ -45,7 +45,13 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 } 
+
+a:hover {
+  // color: white;
+  text-decoration: underline;
+}
 
 ::placeholder {
   font-family: Roboto;
@@ -58,4 +64,18 @@ a {
 }
 .hidden {
   display: none;
+}
+
+@media (max-width: 868px) {
+  .container {
+    padding: 60px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 35px;
+  }
 }
