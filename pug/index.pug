@@ -3,10 +3,58 @@ extends layout/layout.pug
 block content
   #fullpage
     .section
-      | section 1
+      .container
+        .header
+          p  
+            | Привет!
+            | Совсем скоро состоится одно из самых ярких событий этого лета – День компании. Лучшие сотрудники региона соберутся вместе, чтобы принять участие в разБЛОКировке Южного региона.
+            | Узнай больше о блоках компании и взгляни на Билайн по-новому!
+            | До встречи.
     .section
-      | section 2
+      form.form
+        .form__title
+          | Регистрация
+        .form__name
+          input(name="name").autocomplete
+        .form__words
+          input(type="text" name="field1" placeholder="Умный")
+          input(type="text" name="field2" placeholder="Сильный")
+          input(type="text" name="field3" placeholder="Красивый")
     .section
-      | section 3
+      .container
+        .welcome-wrapper
+          .info-wrapper
+            .location-info
+              | ПРИГЛАШАЕМ ВАС
+            .location__data
+              | 29 АВГУСТА
+            .location__data-time 
+              | СБОР ГОСТЕЙ
+            .welcome-time 
+              | с 
+              span 
+                | 17:00   
+              | до
+              span 
+                | 18:00*
+              
+            .adress
+              span 
+                | Адрес:
+              | ул. Шолохова  316, развлекательный комплекс Старый город**  
+            .info-mini
+              | *пропуск гостей на территорию осуществляется ровно в 17.00      
+          .map   
+            img.map-img(src='../src/images/map.jpeg')
+            .info-mini
+              | **все подробности о трансфере на мероприятие вы узнаете в отдельном письме
     .section
-      | section 4
+      .container
+        .contact-wrapper
+          p При возникновении вопросов вы можете обратиться:
+          .contact-name 
+            | Мария Гурьева
+          .contact-mail 
+            | E-mail: mvgureva@rnd.beeline.ru
+          .contact-phone
+            | Тел.: +7 961 274 50 63  
