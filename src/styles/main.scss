@@ -43,3 +43,8 @@ body {
 .image img {
   object-fit: cover;
 }
+
+#fullpage {
+  height: auto !important;
+  background: url('../images/background.svg') no-repeat center/cover;
+}
