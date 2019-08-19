@@ -1,7 +1,7 @@
-import 'fullpage.js'
+import 'fullpage.js';
 var jquery = require("jquery");
 window.$ = window.jQuery = jquery;
-import autoComplete from './auto-complete.js'
+import autoComplete from './auto-complete.js';
 import axios from 'axios'
 
 
