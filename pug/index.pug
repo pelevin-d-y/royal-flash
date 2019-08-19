@@ -15,11 +15,16 @@ block content
         .form__title
           | Регистрация
         .form__name
-          input(name="name").autocomplete
+          input(name="name" required).autocomplete
+        button(type="button").form__name-next
+          | продолжить
         .form__words
           input(type="text" name="field1" placeholder="Умный")
           input(type="text" name="field2" placeholder="Сильный")
           input(type="text" name="field3" placeholder="Красивый")
+          button.form__button
+            | я приду!
+        
     .section
       .container
         .welcome-wrapper

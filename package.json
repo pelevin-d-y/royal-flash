@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel ./pug/index.pug",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "build": "parcel build ./pug/index.pug parcel --public-url ./",
+    "build": "rm -rf dist && parcel build ./pug/index.pug parcel --public-url ./",
     "serve": "nodemon ./backend/*.js"
   },
   "keywords": [],
