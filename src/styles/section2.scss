@@ -39,6 +39,10 @@
     margin-top: 37px;
     width: 250px;
     height: 61px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
     background: #4F61AA;
     border-radius: 30.5px;
     padding: 11px 68px 20px 66px;
@@ -79,11 +83,15 @@
 .coming {
     position: relative;
     margin-top: 37px;
+    display: block;
     width: 250px;
     height: 61px;
     background: #4F61AA;
     border-radius: 30.5px;
     padding: 11px 68px 20px 66px;
+    margin-left: auto;
+    margin-right: auto;
+
     color: #FFFFFF;
 }
 

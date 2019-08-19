@@ -38,9 +38,18 @@ $(document).ready(() => {
       })
     }
   })
+
   let id
-  $('.form__name-next').click(() => {
-    id = people.find(person => person.name === $('.autocomplete').val()).id
+
+  $('.continue').click(() => {
+    const person = people.find(person => person.name === $('.autocomplete').val())
+    if (person) {
+      id = people.find(person => person.name === $('.autocomplete').val()).id
+      $('.form__name-wrapper').addClass('hidden')
+      $('.form__come').removeClass('hidden')
+    } else {
+      alert('Такой человек не найден в базе')
+    }
   })
 
   $('.form').submit(async evt => {
@@ -54,6 +63,7 @@ $(document).ready(() => {
       "field3": formData[3].value,
     }
     const res = await axios.post(`${url}/people/${id}`, data, config)
-    console.log('submit', res, id)
+    console.log('res.data', res.data.response.description)
+    alert(res.data.response.description)
   })
 })
