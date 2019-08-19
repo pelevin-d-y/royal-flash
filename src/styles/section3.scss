@@ -1,0 +1,27 @@
+.welcome-wrapper {
+    display: flex;
+}
+
+.map {
+    margin-left: 60px;
+}
+.map img{
+    max-width: 700px;
+    width: 100%;
+}
+
+.info-wrapper {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.location-data {
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 210, 119, 0.5);
+    margin-top: 2px;
+}
