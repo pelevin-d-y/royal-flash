@@ -4,7 +4,7 @@
 
 body {
   background: url('../images/background.svg') center no-repeat;
-  
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -58,3 +58,17 @@ body {
     background: #FFFFFF;
     border: none;
  }
+
+a {
+  text-decoration: none;
+} 
+
+::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: rgba(0, 0, 0, 0.2);
+}
