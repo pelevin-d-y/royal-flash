@@ -1,0 +1,124 @@
+.container-form {
+    max-width: 484px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form__title {
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 150%;
+}
+.form__name-wrapper {
+    width: 100%;
+}
+.form__name {
+    
+    margin-top: 32px;
+    box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.3);
+    border-radius: 37.5px;
+    
+    input {
+      width: 100%;  
+      padding: 22px;
+      }
+      ::placeholder {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 20px;
+          line-height: 150%;
+          color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.continue {
+    position: relative;
+    margin-top: 37px;
+    width: 250px;
+    height: 61px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    background: #4F61AA;
+    border-radius: 30.5px;
+    padding: 11px 68px 20px 66px;
+    color: #FFFFFF;
+    
+}
+.continue::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: -8px;
+    display: block;
+    width: 245px;
+    height: 58px;
+    border: 2px solid #FFFFFF;
+    border-radius: 30.5px;
+    
+}
+
+.form__words-title {
+    margin-top: 80px;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 150%;
+}
+
+.form__words {
+   max-width: 369px;
+   margin-top: 32px;
+   input {
+       margin-top: 24px;
+   } 
+}
+
+.coming {
+    position: relative;
+    margin-top: 37px;
+    display: block;
+    width: 250px;
+    height: 61px;
+    background: #4F61AA;
+    border-radius: 30.5px;
+    padding: 11px 68px 20px 66px;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #FFFFFF;
+}
+
+.coming::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: -8px;
+    display: block;
+    width: 245px;
+    height: 58px;
+    border: 2px solid #FFFFFF;
+    border-radius: 30.5px;
+
+}
+
+@media (max-width: 482px) {
+    .form__name  {
+        // max-width: 484px;
+    }    
+}
