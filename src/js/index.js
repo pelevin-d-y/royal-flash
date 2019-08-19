@@ -15,9 +15,7 @@ $(document).ready(() => {
   new autoComplete({
     selector: '.autocomplete',
     source: function(term, suggest) {
-      console.log('aaaaaa')
       axios.get('http://192.168.1.211:3000/people', config).then(res => {
-        console.log('data', res.data)
         const choices = res.data.map((el) => el.name)
         suggest(choices);
       })
