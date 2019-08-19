@@ -5,56 +5,55 @@ block content
     .section
       .container
         .header
-          p  
-            | Привет!
-            | Совсем скоро состоится одно из самых ярких событий этого лета – День компании. Лучшие сотрудники региона соберутся вместе, чтобы принять участие в разБЛОКировке Южного региона.
-            | Узнай больше о блоках компании и взгляни на Билайн по-новому!
+          .header-hello
+            | <b>Привет!</b>
+          .header-description 
+            | Совсем скоро состоится одно из самых ярких событий <br>этого лета – <b>День компании.</b> <br>
+            | Лучшие сотрудники региона соберутся вместе, чтобы принять <br>участие в <b>разБЛОКировке</b> Южного региона. <br>
+          .header-more
+            | Узнай больше о блоках компании и взгляни на Билайн по-новому! <br>
             | До встречи.
     .section
-      form.form
+     .container-form
+       form.form
         .form__title
           | Регистрация
         .form__name
-          input(name="name").autocomplete
+          input(name="name" placeholder="Введите ФИО").autocomplete
+        button(type="button").continue  
+          | продолжить
+        .form__words-title
+          | Опиши себя тремя словами  
         .form__words
           input(type="text" name="field1" placeholder="Умный")
           input(type="text" name="field2" placeholder="Сильный")
           input(type="text" name="field3" placeholder="Красивый")
+        button.coming 
+          | я приду 
     .section
       .container
         .welcome-wrapper
           .info-wrapper
             .location-info
-              | ПРИГЛАШАЕМ ВАС
-            .location__data
-              | 29 АВГУСТА
-            .location__data-time 
-              | СБОР ГОСТЕЙ
-            .welcome-time 
-              | с 
-              span 
-                | 17:00   
-              | до
-              span 
-                | 18:00*
-              
+              | Мы ждем тебя <b>29 Августа</b>
+            .location-time 
+              | Сбор гостей с <b>17 00 - 18 00*</b> 
             .adress
-              span 
-                | Адрес:
-              | ул. Шолохова  316, развлекательный комплекс Старый город**  
-            .info-mini
-              | *пропуск гостей на территорию осуществляется ровно в 17.00      
+              | Адрес <b>ул. Шолохова  316, развлекательный комплекс Старый город**</b>  
+            .info-mini1
+              | *пропуск гостей на территорию осуществляется ровно в 17.00 
+            .info-mini2
+              | **все подробности о трансфере на мероприятие вы узнаете в отдельном письме
+       
           .map   
             img.map-img(src='../src/images/map.jpeg')
-            .info-mini
-              | **все подробности о трансфере на мероприятие вы узнаете в отдельном письме
+            
     .section
       .container
         .contact-wrapper
-          p При возникновении вопросов вы можете обратиться:
-          .contact-name 
-            | Мария Гурьева
-          .contact-mail 
-            | E-mail: mvgureva@rnd.beeline.ru
-          .contact-phone
+          .contacts
+            | При возникновении вопросов <br>
+            | вы можете обратиться: <br>
+            | <b>Мария Гурьева</b> <br>
+            | E-mail: mvgureva@rnd.beeline.ru <br>
             | Тел.: +7 961 274 50 63  
