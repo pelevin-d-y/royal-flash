@@ -18,18 +18,20 @@ block content
        form.form
         .form__title
           | Регистрация
-        .form__name
-          input(name="name" placeholder="Введите ФИО").autocomplete
-        button(type="button").continue  
-          | продолжить
-        .form__words-title
-          | Опиши себя тремя словами  
-        .form__words
-          input(type="text" name="field1" placeholder="Умный")
-          input(type="text" name="field2" placeholder="Сильный")
-          input(type="text" name="field3" placeholder="Красивый")
-        button.coming 
-          | я приду 
+        .form__name-wrapper
+          .form__name
+            input(name="name" placeholder="Введите ФИО" required).autocomplete
+          button(type="button").continue  
+            | продолжить
+        .form__come.hidden
+          .form__words-title
+            | Опиши себя тремя словами  
+          .form__words
+            input(type="text" name="field1" placeholder="Умный" required maxlength="25")
+            input(type="text" name="field2" placeholder="Сильный" required maxlength="25")
+            input(type="text" name="field3" placeholder="Красивый" required maxlength="25")
+          button.coming 
+            | я приду 
     .section
       .container
         .welcome-wrapper
@@ -39,7 +41,7 @@ block content
             .location-time 
               | Сбор гостей с <b>17 00 - 18 00*</b> 
             .adress
-              | Адрес <b>ул. Шолохова  316, развлекательный комплекс Старый город**</b>  
+              | Адрес <b>ул. Шолохова  316, развлекательный комплекс Старый город</b>  
             .info-mini1
               | *пропуск гостей на территорию осуществляется ровно в 17.00 
             .info-mini2

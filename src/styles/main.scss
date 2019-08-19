@@ -26,22 +26,6 @@ body {
   height: 200px;
 }
 
-.block-1 {
-  background: red;
-}
-
-.block-2 {
-  background: white;
-}
-
-.block-3 {
-  background: blue;
-}
-
-.block-4 {
-  background: #cccccc;
-}
-
 .image img {
   object-fit: cover;
 }
@@ -71,4 +55,7 @@ a {
   line-height: 16px;
 
   color: rgba(0, 0, 0, 0.2);
+}
+.hidden {
+  display: none;
 }
