@@ -20,9 +20,9 @@ $(document).ready(() => {
 
   $('#fullpage').fullpage({
     onLeave: function(origin, destination, direction) {
-      // if ((registered === false) && (destination>=3)) {
-      //   return false
-      // }
+      if ((registered === false) && (destination>=3)) {
+        return false
+      }
     }  
   });
 
@@ -102,13 +102,4 @@ $(document).ready(() => {
       })
     }
   })
-
-  // map
-
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map("YMapsID", {
-      center: [55.76, 37.64],
-      zoom: 10
-    });
-  });
 })
