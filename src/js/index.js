@@ -8,6 +8,7 @@ import Swal from 'sweetalert2'
 
 $(document).ready(() => {
   const url = 'https://beelineevent.ru'
+  // const url = 'http://127.0.0.1'
   const config = { headers: {"Access-Control-Allow-Origin": "*"} }
   let registered = false
 
