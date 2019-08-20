@@ -80,6 +80,8 @@ $(document).ready(() => {
         text: 'Вы успешно зарегестрированы',
         type: 'success',
         confirmButtonText: 'Закрыть'
+      }).then((result) => {
+        console.log('aaaaaa')
       })
     } else if (res.data.response.description === 'replay') {
       Swal.fire({
@@ -87,6 +89,8 @@ $(document).ready(() => {
         text: 'Вы уже зарегестрированы',
         type: 'error',
         confirmButtonText: 'Закрыть'
+      }).then((result) => {
+        console.log('aaaaaa')
       })
     }
   })
