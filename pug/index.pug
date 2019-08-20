@@ -32,7 +32,7 @@ block content
             input(type="text" name="field3" placeholder="Красивый" required maxlength="25")
           button.coming 
             | я приду 
-    .section.hidden
+    .section
       .container
         .welcome-wrapper
           .info-wrapper
@@ -48,9 +48,10 @@ block content
               | **все подробности о трансфере на мероприятие вы узнаете в отдельном письме
        
           .map   
-            img.map-img(src='../src/images/map.jpeg')
+            //- img.map-img(src='../src/images/map.jpeg')
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A57e980c4a8edce86b44506d01e78e28efa20c12c8aca2ac9d38cbf74b4619ac1&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
             
-    .section.hidden
+    .section
       .container
         .contact-wrapper
           .contacts

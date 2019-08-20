@@ -7,6 +7,11 @@
     margin-left: 60px;
     max-width: 588px;
 }
+
+.map iframe {
+    width: 100%;
+}
+
 .map img{
     
     width: 100%;
@@ -64,6 +69,6 @@
 
 @media (max-width: 600px) {
     .info-wrapper {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
