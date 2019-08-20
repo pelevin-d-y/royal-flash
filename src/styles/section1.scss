@@ -32,4 +32,14 @@
     line-height: 150%;
 }
 
+@media (max-width: 600px) {
+    .header-hello {
+        font-size: 26px;
+        line-height: 32px;
+    }
 
+    .header-description,
+    .header-more {
+        font-size: 18px;
+    }
+}
