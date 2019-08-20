@@ -4,17 +4,16 @@
 html(lang="en")
   head
     meta(charset="utf-8")
+    meta(name="viewport" content="minimal-ui")
     link(href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet")
     link(rel='shortcut icon' type='image/x-icon' href='./favicon.ico')
     title Beeline event
     meta(name="description" content="The HTML5 Herald")
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1")
     block scripts
+      script(type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A57e980c4a8edce86b44506d01e78e28efa20c12c8aca2ac9d38cbf74b4619ac1&amp;width=615&amp;height=474&amp;lang=ru_RU&amp;scroll=true")
       script(src='../src/js/index.js')
     block styles
       link(rel="stylesheet" href="../src/styles/styles.scss")
   body
     block content
-    block foot
-      #footer
-        p some footer content

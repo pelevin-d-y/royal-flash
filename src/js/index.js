@@ -20,11 +20,13 @@ $(document).ready(() => {
 
   $('#fullpage').fullpage({
     onLeave: function(origin, destination, direction) {
-      if ((registered === false) && (destination>=3)) {
-        return false
-      }
+      // if ((registered === false) && (destination>=3)) {
+      //   return false
+      // }
     }  
   });
+
+  // autocomplete
 
   new autoComplete({
     selector: '.autocomplete',
@@ -43,6 +45,8 @@ $(document).ready(() => {
     }
   })
 
+
+  // form
   let id
 
   $('.continue').click(() => {
@@ -60,6 +64,10 @@ $(document).ready(() => {
       })
     }
   })
+
+  const alertHandler = () => {
+    $.fn.fullpage.moveTo(3)
+  }
 
   $('.form').submit(async evt => {
     evt.preventDefault()
@@ -80,6 +88,8 @@ $(document).ready(() => {
         text: 'Вы успешно зарегестрированы',
         type: 'success',
         confirmButtonText: 'Закрыть'
+      }).then(() => {
+        alertHandler()
       })
     } else if (res.data.response.description === 'replay') {
       Swal.fire({
@@ -87,7 +97,18 @@ $(document).ready(() => {
         text: 'Вы уже зарегестрированы',
         type: 'error',
         confirmButtonText: 'Закрыть'
+      }).then(() => {
+        alertHandler()
       })
     }
   })
+
+  // map
+
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map("YMapsID", {
+      center: [55.76, 37.64],
+      zoom: 10
+    });
+  });
 })
