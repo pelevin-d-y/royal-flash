@@ -55,6 +55,11 @@
     color: rgba(0, 0, 0, 0.6);
 }
 
+.map > ymaps {
+border-radius: 5px;
+overflow: hidden;
+}
+
 @media (max-width: 1069px) {
     .welcome-wrapper {
         flex-direction: column;
@@ -98,10 +103,14 @@
     }
 
     .map {
-        border: 10px solid white;
         height: 240px;
         margin-top: 9px;
-        margin-right: 9px;
         overflow: hidden;
+        box-shadow: none;
+    }
+
+    .map iframe {
+        display: block;
+        margin: 0 auto;
     }
 }
