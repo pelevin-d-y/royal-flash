@@ -24,14 +24,15 @@
     width: 100%;
 }
 .form__name {
-    
     margin-top: 32px;
     box-shadow: 0px 4px 30px rgba(255, 255, 255, 0.3);
     border-radius: 37.5px;
     
     input {
       width: 100%;  
-      padding: 22px;
+      padding: 19px 19px 19px 19px;
+      font-size: 20px;
+      line-height: 150%;
       }
       ::placeholder {
           font-family: Roboto;
@@ -114,11 +115,30 @@
     height: 58px;
     border: 2px solid #FFFFFF;
     border-radius: 30.5px;
-
 }
 
-@media (max-width: 482px) {
-    .form__name  {
-        // max-width: 484px;
-    }    
+@media (max-width: 600px) {
+    .form__words-title {
+        margin-top: 10px;
+        font-size: 22px;
+    }
+
+    .form__come {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .form__words {
+        margin-top: 10px;
+    }
+
+    .form__words input {
+        margin-top: 14px;
+        font-size: 16px;
+    }
+
+    .form__words input::placeholder {
+        font-size: 16px;
+        line-height: 140%;
+    }
 }
