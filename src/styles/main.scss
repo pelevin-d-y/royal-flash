@@ -4,7 +4,7 @@
 
 body {
   background: url('../images/background.svg') center/cover no-repeat;
-  font-family: 'Roboto', sans-serif;
+  
 }
 
 .container {
@@ -36,6 +36,10 @@ body {
     border-radius: 37.5px;
     background: #FFFFFF;
     border: none;
+    outline: none;
+ }
+
+ button {
     outline: none;
  }
 
