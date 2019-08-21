@@ -1,6 +1,7 @@
 import 'fullpage.js';
 var jquery = require("jquery");
 window.$ = window.jQuery = jquery;
+import 'babel-polyfill';
 import autoComplete from './auto-complete.js';
 import axios from 'axios'
 import Swal from 'sweetalert2'
